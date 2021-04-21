@@ -13,8 +13,10 @@ export class HomeComponent implements OnInit {
     constructor(private dataService: DataService) { }
 
     ngOnInit() {
-        this.dataService.getMessage().subscribe((message: string) => {
-            this.message = message;
-        })
+        this.message = "Initialized";
+        // this.dataService.getMessage().subscribe((message: string) => {
+        //     this.message = message;
+        //     console.log(this.message);
+        // });
     }
 }
