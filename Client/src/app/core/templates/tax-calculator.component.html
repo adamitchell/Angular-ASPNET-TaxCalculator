@@ -36,8 +36,8 @@
               <p>{{'USD: $' + taxCalculation.value}}</p>
             </div>
             <div class="input-group">
-              <label for="income">Total</label>
-              <p>{{'USD: $' + (taxCalculation.value + (income ? income : 0))}}</p>
+              <label for="income">Total After Taxes</label>
+              <p>{{'USD: $' + ((income ? income : 0) - taxCalculation.value)}}</p>
             </div>
           </div>
         <!-- </div> -->
