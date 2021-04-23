@@ -12,9 +12,10 @@ export class TaxCalculatorService {
     constructor(private http: HttpClient) { }
 
     getCalculatedTax(income: number, zipCode: number) : Observable<string> {
-        return this.http.get<any>(this.url)
+        let extendedUrl = this.url + '/GetCalculatedTax/' + income + '/' + zipCode;
+        return this.http.get<any>(extendedUrl)
             .pipe(
-                map(res => res['data']),
+                map(res => res),
                 catchError(this.handleError)
             );
     }

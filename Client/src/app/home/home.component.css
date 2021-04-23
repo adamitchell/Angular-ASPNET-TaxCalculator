@@ -1,8 +1,65 @@
 .home {
-  height: 10vh;
+  height: 72px;
   width: 100%;
+  background-color: white;
+  position: sticky;
+  top: 0px;
 }
 
 .home-routes {
   padding: 0px;
+  margin: 0px;
+  height: 72px;
+}
+
+.home-routes li {
+  display: inline-block;
+  height: 100%;
+}
+
+.route a {
+  text-decoration: none;
+  background-color: transparent;
+  color: #005cb9;
+  border-right: 1px solid black;
+  height: 72px;
+  width: 165px;
+  max-width: 165px;
+  text-align: center;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 72px;
+  font-weight: bold;
+}
+
+.route a:hover {
+  background-color:#005cb9;
+  color: white;
+}
+
+.autosoft-logo {
+  height: 72px;
+  width: 250px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+
+.autosoft-logo img {
+  height: 72px;
+}
+
+.home-footer {
+  height: 40px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.home-footer p {
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  color: #005cb9;
 }

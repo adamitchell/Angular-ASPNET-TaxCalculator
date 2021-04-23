@@ -1,3 +1,48 @@
-<div class="tax-calculator-container">
-  Pay your taxes so you can contribute to society.
+<div class="route-component">
+  <p class="directions">
+    {{directions}}
+  </p>
+  <div class="tax-tool-container">
+    <div class="tax-tool default-shadow">
+      <div class="tool-header">
+  
+      </div>
+      <div class="tool-body">
+        <div class="input-group">
+          <label for="income">Annual Income</label>
+          <input id="incomeInput" class="tool-input" name="income" type="number" placeholder="ex: 110000" />
+          <!-- <input id="incomeInput" class="tool-input" [(ngModel)]="income" name="income" type="number" placeholder="ex: 110000" /> -->
+        </div>
+        <div class="input-group">
+          <label for="zipCode">Zip Code</label>
+          <input id="zipCodeInput" class="tool-input" name="zipCode" type="number" placeholder="ex: 77386" />
+          <!-- <input id="zipCodeInput" class="tool-input" [(ngModel)]="zipCode" name="zipCode" type="number" placeholder="ex: 77386" /> -->
+        </div>
+        <div class="input-group button">
+          <button class="default-shadow" (click)="getCalculatedTax()">Calculate</button>
+        </div>
+      </div>
+      <div class="tool-footer">
+        <!-- <p class="loading-message" [ngClass]="{'error': isError()}">{{loadingMessage}}</p> -->
+          <!-- <div *ngIf="!loadingMessage && taxCalculation"></div> -->
+
+          <div class="calculation-container">
+            <div class="input-group">
+              <label for="income">Formula</label>
+              <p>{{taxCalculation.formula}}</p>
+            </div>
+            <div class="input-group">
+              <label for="income">Tax</label>
+              <p>{{'USD: $' + taxCalculation.value}}</p>
+            </div>
+            <div class="input-group">
+              <label for="income">Total</label>
+              <p>{{'USD: $' + (taxCalculation.value + (income ? income : 0))}}</p>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  <p class="loading-message">{{loadingMessage}}</p>
 </div>

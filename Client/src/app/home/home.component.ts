@@ -1,6 +1,5 @@
 ﻿import { Component, OnInit } from '@angular/core';
-
-import { DataService } from '../core/services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-home',
@@ -8,16 +7,10 @@ import { DataService } from '../core/services/data.service';
     styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+    constructor(private router: Router) { }
 
-    message: string;
-
-    constructor(private dataService: DataService) { }
-
-    ngOnInit() {
-        this.message = "Initialized";
-        // this.dataService.getMessage().subscribe((message: string) => {
-        //     this.message = message;
-        //     console.log(this.message);
-        // });
+    ngOnInit() 
+    {
+        this.router.navigate(['/home/tax-calculator']);
     }
 }

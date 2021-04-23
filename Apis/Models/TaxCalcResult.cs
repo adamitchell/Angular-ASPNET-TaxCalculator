@@ -8,6 +8,11 @@ namespace Angular_ASPNETCore_Seed.Models
         }
 
         public string Formula { get; set; }
-        public int Value { get; set; }
+        public double Value { get; set; }
+    }
+
+    public class TaxCalcResultErrorsAllowed : TaxCalcResult
+    {
+        public string Error = null;
     }
 }

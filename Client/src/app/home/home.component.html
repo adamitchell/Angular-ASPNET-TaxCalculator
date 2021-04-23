@@ -1,12 +1,18 @@
 
-<div class="home">
+<div class="home default-shadow">
   <ul class="home-routes">
     <li class="route">
-      <a class="link">Tax Calculator</a>
+      <a [routerLink]="['/home/tax-calculator']" class="link">Tax Calculator</a>
     </li>
     <li class="route">
-      <a class="link">Hire Adam</a>
+      <a [routerLink]="['/home/hire-adam']" class="link">Hire Adam</a>
     </li>
   </ul>
+  <div class="autosoft-logo">
+    <img title="" alt="" src="https://autosoftdms.com/wp-content/uploads/2020/01/as_hrz_4c_ltbg.png">
+  </div>
+</div>
+<div class="home-footer">
+  <p>Something written here that's SUPER important.</p>
 </div>
 <router-outlet></router-outlet>

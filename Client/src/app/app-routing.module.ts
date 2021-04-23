@@ -6,14 +6,14 @@ import { TaxCalculatorComponent } from './core/controllers/tax-calculator.compon
 import { HireAdamComponent } from './core/controllers/hire-adam.component';
 
 const routes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: '/home' },
+    { path: '', pathMatch: 'full', redirectTo: '/home/tax-calculator' },
     { path: 'home', component: HomeComponent,
         children: [
           { path: 'tax-calculator', component: TaxCalculatorComponent },
           { path: 'hire-adam', component: HireAdamComponent }
         ] 
     },
-    { path: '**', redirectTo: '/home/tax-calculator' } 
+    { path: '**', redirectTo: 'home' } 
 ];
 
 @NgModule({
